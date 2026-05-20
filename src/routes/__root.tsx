@@ -72,14 +72,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Dominar Climatização — Limpeza de Ar-Condicionado" },
+      { name: "description", content: "Limpeza profissional de ar-condicionado com agendamento rápido e preço justo. Atendemos toda sua cidade e região." },
+      { property: "og:title", content: "Dominar Climatização" },
+      { property: "og:description", content: "Limpeza profissional de ar-condicionado com preço justo." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

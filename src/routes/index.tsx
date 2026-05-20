@@ -21,6 +21,20 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP_URL = "https://wa.me/5500000000000";
 
+// --- BANNER COM A IMAGEM GOOGLE-STARS.PNG ---
+function TopBanner() {
+  return (
+    <div className="w-full bg-slate-50 flex justify-center items-center py-2 border-b border-gray-200 z-50 relative">
+      <img 
+        src="/google-stars.png" 
+        alt="Empresa 5 Estrelas no Google" 
+        className="h-10 md:h-12 object-contain" 
+      />
+    </div>
+  );
+}
+// ---------------------------------------------
+
 function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur border-b border-border">
@@ -311,6 +325,8 @@ function FloatingWhatsApp() {
 function Index() {
   return (
     <div className="min-h-screen bg-background">
+      {/* O BANNER FOI INSERIDO AQUI, ACIMA DO MENU */}
+      <TopBanner />
       <Navbar />
       <main>
         <Hero />

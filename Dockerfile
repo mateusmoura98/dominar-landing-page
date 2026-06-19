@@ -1,15 +1,13 @@
-FROM node:22-alpine AS builder
+FROM node:22.12.0-alpine
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 COPY . .
 RUN npm run build
 
-FROM caddy:2-alpine
+EXPOSE 4173
 
-COPY --from=builder /app/dist /srv
-
-COPY Caddyfile /etc/caddy/Caddyfile
+CMD ["npm", "run", "preview", "--", "--port", "4173", "--host", "0.0.0.0"]
